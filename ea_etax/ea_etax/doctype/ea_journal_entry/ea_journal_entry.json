@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-10-14 16:28:16.118112",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "voucher_type",
+  "naming_series",
+  "company",
+  "column_break_ejxri",
+  "posting_date",
+  "section_break_ckgw5",
+  "total_debit",
+  "column_break_6x5dv",
+  "total_credit",
+  "section_break_qjyl3",
+  "accounts",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Journal Entry",
+   "fieldname": "voucher_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Entry Type",
+   "options": "Journal Entry",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "EA-JV-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "total_debit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Debit",
+   "no_copy": 1,
+   "options": "Company:company:default_currency",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_credit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Credit",
+   "no_copy": 1,
+   "options": "Company:company:default_currency",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounts",
+   "fieldtype": "Table",
+   "label": "EA Accounting Entries",
+   "options": "EA Journal Entry Account"
+  },
+  {
+   "fieldname": "column_break_ejxri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ckgw5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_6x5dv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qjyl3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EA Journal Entry",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-15 15:09:45.975863",
+ "modified_by": "Administrator",
+ "module": "EA ETax",
+ "name": "EA Journal Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
